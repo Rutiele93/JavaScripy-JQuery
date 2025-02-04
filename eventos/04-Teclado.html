@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="port-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado</title>
+
+    <script>
+        /*
+        onKeyUp: exibe o caractere e depois execulta ação.
+        onKeyDown e onKeyPress: Primeiro Execulta acção e depois exiber o catacter
+        onKeyPress: não tem suporte a tecla F1, F12, ..., Ctrl, Shift...
+        */
+
+        function exibir() {
+            var campo = document.getElementById("campo").value;
+            alert(campo)
+        }
+    </script>
+</head>
+
+<body>
+    <!--<input type="text" id="campo" onkeyup="exibir()">-->
+    <!--<input type="text" id="campo" onkeyPress="exibir()">-->
+    <input type="text" id="campo" onkeydown="exibir()">
+</body>
+
+</html>
